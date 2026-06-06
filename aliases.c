@@ -1,4 +1,4 @@
-#define BASE_1_4 KC_BSPC
+#define BASE_1_4 LT(_ART_CUS,KC_TAB)
 #define BASE_1_3 KC_T
 #define BASE_1_2 KC_E
 #define BASE_1_1 KC_N
@@ -6,7 +6,7 @@
 #define BASE_2_3 KC_K
 #define BASE_2_2 KC_A
 #define BASE_2_1 KC_I
-#define BASE_3_4 KC_ENT
+#define BASE_3_4 LT(_ART_NAV,KC_ENT)
 #define BASE_3_3 KC_P
 #define BASE_3_2 KC_F
 #define BASE_3_1 KC_C
@@ -37,8 +37,8 @@
 #define CUS_1_4 KC_TRNS
 #define CUS_1_3 KC_MPRV
 #define CUS_1_2 KC_MNXT
-#define CUS_1_1 KC_TRNS
-#define CUS_2_4 KC_MPLY
+#define CUS_1_1 KC_MPLY
+#define CUS_2_4 KC_TRNS
 #define CUS_2_3 KC_MUTE
 #define CUS_2_2 KC_VOLU
 #define CUS_2_1 KC_TRNS
@@ -50,7 +50,7 @@
 #define NAV_1_3 KC_PGUP
 #define NAV_1_2 KC_UP
 #define NAV_1_1 KC_PGDN
-#define NAV_2_4 KC_TRNS
+#define NAV_2_4 LALT(KC_TAB)
 #define NAV_2_3 KC_LEFT
 #define NAV_2_2 KC_DOWN
 #define NAV_2_1 KC_RIGHT

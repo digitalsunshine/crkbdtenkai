@@ -20,28 +20,40 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-// Allow VIA to support up to 10 layers 
+// Protect the C enum from breaking the Assembly compiler
+#ifndef __ASSEMBLER__
+enum custom_layers {
+  _ART_BASE,
+  _ART_NUM,
+  _ART_CUS,
+  _ART_PUNC,
+  _ART_NAV,
+  _ART_FUNC,
+  _ART_MAC,
+};
+#endif
+
+// Allow VIA to support up to 10 layers
 #define DYNAMIC_KEYMAP_LAYER_COUNT 10
 
 // Define which physical half of the Corne you are plugging the USB cable into
 #define MASTER_LEFT
 
-#pragma once
+// Combo Boundaries Configuration
+#define COMBO_COUNT 60            // Tells QMK you will only use exactly 60 combos total
+#define COMBO_MAX_SIZE 4          // Restricts combos to 4-key chord combinations maximum
+#define COMBO_KEY_BUFFER_LENGTH 4 // Allow combos to accept up to 4 keys pressed simultaneously
 
-#define DYNAMIC_KEYMAP_LAYER_COUNT 10
-#define MASTER_LEFT
+// Timing & Detection Optimizations for 3+ Key Combos
+#define COMBO_TERM 500            // Combo window duration (in milliseconds)
+#define COMBO_CHORD_TIMEOUT 80    // Maximum delay allowed between first and last key depress
+#define COMBO_STRICT_TIMER       // Optional: Ensure all keys must be pressed within the term
 
-// Combo Boundaries
-#define COMBO_COUNT 60          // Tells QMK you will only use exactly  combos total
-#define COMBO_MAX_SIZE 4        // Restricts combos to 4-key chord combinations maximum
-#define COMBO_TERM 200          // Increase the combo window so they register more slowly (default is 50)
-#define COMBO_CHORD_TIMEOUT 80  // Force QMK to wait until all keys are pressed before processing
-#define COMBO_ALLOW_ACTION_KEYS // Allow processing of heavier chords (default is 2 if not declared)
-
+// Optional features (Uncomment if needed)
 //#define USE_MATRIX_I2C
-
 //#define QUICK_TAP_TERM 0
 //#define TAPPING_TERM 100
+//#define IGNORE_MOD_TAP_INTERRUPT
 
 #ifdef RGBLIGHT_ENABLE
     #define RGBLIGHT_EFFECT_BREATHING
