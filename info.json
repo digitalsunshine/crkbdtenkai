@@ -1,0 +1,40 @@
+{
+    "keyboard_name": "tenkai (crkbd)",
+    "manufacturer": "Digitalsunshine",
+    "development_board": "promicro",
+    "bootloader": "caterina",
+    "usb": {
+        "vid": "0x4653",
+        "pid": "0x0001"
+    },
+    "layout_aliases": {
+        "LAYOUT": "LAYOUT_single_3x5_3"
+    },
+    "layouts": {
+        "LAYOUT_single_3x5_3": {
+            "layout": [
+                {"matrix": [0, 1], "label":"Q", "x":0, "y":0.3},
+                {"matrix": [0, 2], "label":"W", "x":1, "y":0.1},
+                {"matrix": [0, 3], "label":"E", "x":2, "y":0},
+                {"matrix": [0, 4], "label":"R", "x":3, "y":0.1},
+                {"matrix": [0, 5], "label":"T", "x":4, "y":0.2},
+
+                {"matrix": [1, 1], "label":"A", "x":0, "y":1.3},
+                {"matrix": [1, 2], "label":"S", "x":1, "y":1.1},
+                {"matrix": [1, 3], "label":"D", "x":2, "y":1},
+                {"matrix": [1, 4], "label":"F", "x":3, "y":1.1},
+                {"matrix": [1, 5], "label":"G", "x":4, "y":1.2},
+
+                {"matrix": [2, 1], "label":"Z", "x":0, "y":2.3},
+                {"matrix": [2, 2], "label":"X", "x":1, "y":2.1},
+                {"matrix": [2, 3], "label":"C", "x":2, "y":2},
+                {"matrix": [2, 4], "label":"V", "x":3, "y":2.1},
+                {"matrix": [2, 5], "label":"B", "x":4, "y":2.2},
+
+                {"matrix": [3, 3], "label":"GUI", "x":3, "y":3.7},
+                {"matrix": [3, 4], "label":"Lower", "x":4, "y":3.7},
+                {"matrix": [3, 5], "label":"Space", "x":5, "y":3.2}
+            ]
+        }
+    }
+}
